@@ -26,7 +26,7 @@ var FLOOR_TILES = "grasstiles2.PNG"
 
 function quote(string)
 {
-  return '"'+string+'"';
+  return "'"+string+"'";
 }
 
 //display map
@@ -37,7 +37,7 @@ for (var i = 0 ; i 	< MAP_HEIGHT; i++)
 	for (var j = 0; j <MAP_WIDTH;j++)
 	{
 	    document.write("		<td align=\"center\">");
-		ja=document.write("		<div   id =\"" + j + ":"  + i+"\" style=\"width:30px;height:33px;background-image:url("+quote(FLOOR_TILES)+");\"></div>");
+		document.write("		<div   id =\"" + j + ":"  + i+"\" style=\"width:30px;height:33px;background-image:url("+quote(FLOOR_TILES)+");\"></div>");
 		document.write("		</td>");
 	}
 	document.write("</tr>");
