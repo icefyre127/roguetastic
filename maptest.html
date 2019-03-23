@@ -6,22 +6,25 @@
 
 </head>
 
-<body style="font-family:Courier New;color:white; overflow-y:hidden; font-size: 100%">
+<body bgcolor="black" style="font-family:Courier New;color:white; overflow-y:hidden; font-size: 100%">
 <div id = "wrapper">
-
+<div id = "title"> 
+<p style="text-align:center; font-size: xx-large; font-family:Serif">Roguetastic</p>
+</div>
 <div id="map" 
 style = "position:absolute; 
-overflow-y:hidden; left:20%; 
+overflow-y:hidden; left:20%;
+top: 15%; 
 margin-left: -29px ;
-width: 800px; 
-height: 550px; 
+width: 810px; 
+height: 530px; 
 overflow-x: auto; 
 background-color:black">
 
 <script type="text/javascript">
 
-var MAP_HEIGHT = 16;
-var MAP_WIDTH = 27;
+var MAP_HEIGHT = 17; //16
+var MAP_WIDTH = 27; //27
 var FLOOR_TILES = "grasstiles2.PNG"
 
 function quote(string)
@@ -69,7 +72,7 @@ function Creature(name, image, xloc,yloc)
 		if(typeof(x)==='undefined') x = this.xloc;
 		if(typeof(y)==='undefined') y = this.yloc;
 		
-		if (x <  0 || y < 0 || x >= MAP_WIDTH  || y >= MAP_HEIGHT) 
+		if (x <  0 || y < 0 || x >= MAP_WIDTH  || y >= MAP_HEIGHT-1) 
 			return;
 		loc = document.getElementById(this.location());
 		loc.innerHTML =  '<img src=\"'+FLOOR_TILES+'\">';
